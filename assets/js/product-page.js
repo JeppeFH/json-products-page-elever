@@ -9,6 +9,15 @@ export function productPage() {
   );
 
   if (productsPageContainer) {
-    productsPageContainer.innerHTML = "koden virker";
+    let search = location.search;
+
+    let productID = new URLSearchParams(search).get("id");
+
+    let findProduct = products.find((product) => product.id == productID);
+
+    productsPageContainer.insertAdjacentHTML(
+      "beforeend",
+      productPageTmpl(findProduct)
+    );
   }
 }
