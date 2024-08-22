@@ -20,4 +20,7 @@ export function productPage() {
       productPageTmpl(findProduct)
     );
   }
+
+  let readMoreBtn = document.querySelector(".read-more-btn");
+  let readMoreBox = document.querySelector(".read-more");
 }

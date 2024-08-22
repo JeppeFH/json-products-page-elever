@@ -8,3 +8,10 @@ app.init = async () => {
 };
 
 app.init();
+
+let readMoreBtn = document.querySelector(".read-more-btn");
+let readMoreBox = document.querySelector(".read-more");
+
+readMoreBtn.addEventListener("click", () => {
+  readMoreBox.classList.toggle("active");
+});

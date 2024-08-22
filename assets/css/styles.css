@@ -25,33 +25,69 @@ h1 {
   display: grid;
   grid-template-columns: repeat(3, auto);
   justify-content: center;
-  gap: 40px;
+  column-gap: 40px;
+  row-gap: 50px;
+}
+
+.product-list-display {
+  flex-direction: column;
+  display: flex;
+  position: relative;
+  background-color: lightgrey;
+  padding-bottom: 40px;
+  border-radius: 5px;
+}
+
+.product-list-display img {
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
 }
 
 .post-container p:nth-of-type(1) {
   font-size: 1.8rem;
   margin-bottom: 5px;
+  padding-left: 5px;
+  margin-top: 5px;
 }
 
 .post-container p:nth-of-type(2) {
   font-size: 1.6rem;
   margin-bottom: 5px;
+  padding-left: 5px;
 }
 
-button {
+.product-btn {
   font-size: 1.6rem;
   display: inline-block;
   padding: 5px;
   text-align: center;
-  align-items: center;
-  justify-content: center;
   background-color: grey;
   border-radius: 10px;
+  width: 35%;
+  height: 30px;
+  cursor: pointer;
+  margin-left: 5px;
 }
 
-button a {
+.product-btn a {
   text-decoration: none;
   color: white;
+}
+
+label {
+  margin-bottom: 15px;
+  font-size: 1.2rem;
+}
+
+label a {
+  color: black;
+  cursor: pointer;
+  text-decoration: underline;
+  padding-left: 5px;
+}
+
+label a:hover {
+  color: rgb(29, 29, 29);
 }
 
 .buttons {
@@ -60,8 +96,47 @@ button a {
   margin-bottom: 30px;
   gap: 5px;
 }
+.btnGrid,
+.btnList {
+  font-size: 1.6rem;
+  display: inline-block;
+  padding: 5px;
+  text-align: center;
+  background-color: black;
+  border-radius: 10px;
+  color: white;
+  cursor: pointer;
+  border: none;
+}
 
 .btnGrid:hover,
 .btnList:hover {
   cursor: pointer;
+}
+
+.read-more {
+  background-color: rgb(236, 236, 236);
+  border-radius: 5px;
+  width: 50%;
+  margin-bottom: 20px;
+  position: relative;
+  left: 146px;
+  top: 365px;
+  display: none;
+  position: absolute;
+}
+
+.read-more.active {
+  display: block;
+  transition: all 300ms ease-in-out;
+}
+
+.read-more p {
+  font-size: 1.1rem !important ;
+  padding-left: 10px;
+  margin-bottom: 10px !important;
+}
+
+.read-more p:nth-of-type(1) {
+  margin-top: 10px;
 }
